@@ -1,14 +1,11 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.css";
 import { motion } from "framer-motion";
 // import emailjs from "@emailjs/browser";
-import { themeContext } from "../../Context";
 
 const Contact = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   const form = useRef();
-  const [done, setDone] = useState(false);
+  const [done] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

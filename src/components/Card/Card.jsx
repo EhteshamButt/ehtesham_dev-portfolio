@@ -19,7 +19,7 @@ const Card = ({emoji, heading, detail, color}) => {
       <span>{detail}</span>
       <a
       className="nav-link text-light"
-      // href="https://saloonshop.vercel.app/"
+      href="#"
     >  <button className="c-button">Click Here</button></a>
      
     </div>

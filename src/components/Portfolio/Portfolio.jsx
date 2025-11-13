@@ -1,23 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Portfolio.css";
 import { motion } from "framer-motion";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css";
-import Sidebar from "../../img/sidebar.png";
-
-import c from "../../img/c.PNG";
-import restorent from "../../img/restorent.PNG";
 import legalpro from "../../img/legalpro.png";
 
-
-import HOC from "../../img/hoc.png";
-
-import { themeContext } from "../../Context";
 const Portfolio = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -89,7 +76,7 @@ const Portfolio = () => {
   >
     <div class="card-wrap bbbb">
       <div class="card-header one" style={{ height: '200px' }}>
-        <img src={legalpro} style={{ width: '100%', height: '100%' }} />
+        <img src={legalpro} alt="Legal Pro project" style={{ width: '100%', height: '100%' }} />
       </div>
       <div class="card-content">
         <h1 class="card-title">Legal Pro for law firm
@@ -110,7 +97,7 @@ const Portfolio = () => {
   >
     <div class="card-wrap bbbb">
   <div class="card-header one" style={{ height: '200px' }}>
-    <img src='https://res.cloudinary.com/alpja/image/upload/v1702752171/e7dslq84hzg0wdxyyvyp.png' style={{ width: '100%', height: '100%' }} />
+    <img src='https://res.cloudinary.com/alpja/image/upload/v1702752171/e7dslq84hzg0wdxyyvyp.png' alt="Medical Test System project" style={{ width: '100%', height: '100%' }} />
   </div>
   <div class="card-content">
     <h1 class="card-title">Medical Test System for Hospital in React.js Node js</h1>
@@ -130,7 +117,7 @@ const Portfolio = () => {
   >
     <div class="card-wrap">
   <div class="card-header two" style={{ height: '200px' }}>
-    <img src='https://res.cloudinary.com/alpja/image/upload/v1702752592/vffs7bx9yrfsk98aorz9.png' alt="" style={{ width: '100%', height: '100%' }} />
+    <img src='https://res.cloudinary.com/alpja/image/upload/v1702752592/vffs7bx9yrfsk98aorz9.png' alt="Hospital system project" style={{ width: '100%', height: '100%' }} />
   </div>
   <div class="card-content">
     <h1 class="card-title">doingthistogether, a complete hospital system in Next/Reactjs/Node</h1>
@@ -149,7 +136,7 @@ const Portfolio = () => {
   > 
     <div class="card-wrap">
   <div class="card-header three">
-  <img src='https://res.cloudinary.com/alpja/image/upload/v1704651644/ueg5qjvk46j6jhqofvfu.png' alt="" style={{ width: '100%', height: '100%' }} />
+  <img src='https://res.cloudinary.com/alpja/image/upload/v1704651644/ueg5qjvk46j6jhqofvfu.png' alt="Saloon Shop project" style={{ width: '100%', height: '100%' }} />
   </div>
   <div class="card-content">
     <h1 class="card-title">Saloon Shop/Services website in React js and Nest js Node</h1>
@@ -167,7 +154,7 @@ const Portfolio = () => {
   > 
     <div class="card-wrap">
   <div class="card-header four">
-  <img src='https://res.cloudinary.com/alpja/image/upload/v1702752829/crsvhuzcpfgjvgdrdgz9.png' alt="" style={{ width: '100%', height: '100%' }} />
+  <img src='https://res.cloudinary.com/alpja/image/upload/v1702752829/crsvhuzcpfgjvgdrdgz9.png' alt="Medassist hospital system" style={{ width: '100%', height: '100%' }} />
   </div>
 
   <div class="card-content">
@@ -185,7 +172,7 @@ const Portfolio = () => {
   > 
     <div class="card-wrap">
   <div class="card-header four">
-  <img src='https://res.cloudinary.com/dgmjg9zr4/image/upload/v1746661034/WhatsApp_Image_2025-05-07_at_4_34_21_PM-Picsart-AiImageEnhancer_rarbvc.png' alt="" style={{ width: '100%', height: '100%' }} />
+  <img src='https://res.cloudinary.com/dgmjg9zr4/image/upload/v1746661034/WhatsApp_Image_2025-05-07_at_4_34_21_PM-Picsart-AiImageEnhancer_rarbvc.png' alt="DTT hospital billing system" style={{ width: '100%', height: '100%' }} />
   </div>
 
   <div class="card-content">
@@ -203,7 +190,7 @@ const Portfolio = () => {
   > 
     <div class="card-wrap">
   <div class="card-header four">
-  <img src='https://res.cloudinary.com/dgmjg9zr4/image/upload/v1746662333/WhatsApp_Image_2025-05-07_at_4.58.20_PM_npsopo.jpg' alt="" style={{ width: '100%', height: '100%' }} />
+  <img src='https://res.cloudinary.com/dgmjg9zr4/image/upload/v1746662333/WhatsApp_Image_2025-05-07_at_4.58.20_PM_npsopo.jpg' alt="Silver Care Agency project" style={{ width: '100%', height: '100%' }} />
   </div>
 
   <div class="card-content">
