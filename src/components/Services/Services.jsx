@@ -1,190 +1,162 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Services.css";
+import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    icon: "⚛️",
+    title: "Full Stack Development",
+    color: "#61DAFB",
+    bg: "rgba(97,218,251,0.1)",
+    border: "rgba(97,218,251,0.3)",
+    desc: "End-to-end web applications using React.js, Next.js, Node.js, NestJS, and Express.js — from pixel-perfect UI to scalable backend APIs.",
+    tags: ["React.js", "Next.js", "Node.js", "NestJS", "TypeScript"],
+  },
+  {
+    icon: "🐍",
+    title: "Python & FastAPI Backend",
+    color: "#4B8BBE",
+    bg: "rgba(75,139,190,0.1)",
+    border: "rgba(75,139,190,0.3)",
+    desc: "High-performance REST APIs and microservices with Python and FastAPI, including data processing pipelines, async services, and server-side automation.",
+    tags: ["Python", "FastAPI", "REST APIs", "Microservices", "Async"],
+  },
+  {
+    icon: "🤖",
+    title: "AI & LLM Integration",
+    color: "#B794F4",
+    bg: "rgba(183,148,244,0.1)",
+    border: "rgba(183,148,244,0.3)",
+    desc: "Production AI features using OpenAI, Claude, and Qwen — RAG pipelines, LangChain workflows, OCR, document intelligence, and conversational AI.",
+    tags: ["OpenAI", "RAG", "LangChain", "OCR", "AWS Bedrock"],
+  },
+  {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    color: "#FCA61F",
+    bg: "rgba(252,166,31,0.1)",
+    border: "rgba(252,166,31,0.3)",
+    desc: "Scalable cloud deployments on AWS (EC2, S3, Lambda, EKS, RDS, API Gateway) with automated CI/CD pipelines using GitHub Actions and GitLab CI.",
+    tags: ["AWS", "CI/CD", "Docker", "GitHub Actions", "Vercel"],
+  },
+  {
+    icon: "🗄️",
+    title: "Database Design",
+    color: "#68D391",
+    bg: "rgba(104,211,145,0.1)",
+    border: "rgba(104,211,145,0.3)",
+    desc: "Schema design, query optimization, indexing, and caching strategies across PostgreSQL, MongoDB, Redis, DynamoDB, Supabase, and Firebase.",
+    tags: ["PostgreSQL", "MongoDB", "Redis", "DynamoDB", "Supabase"],
+  },
+  {
+    icon: "🔗",
+    title: "API & Third-Party Integrations",
+    color: "#4FD1C5",
+    bg: "rgba(79,209,197,0.1)",
+    border: "rgba(79,209,197,0.3)",
+    desc: "Seamless integrations with payment gateways, communication platforms, analytics, and cloud services to power complete business workflows.",
+    tags: ["Stripe", "Twilio", "Mailgun", "GraphQL", "WebSockets"],
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, type: "spring" } },
+};
 
 const Services = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
-  return (<>
-  {/* <div class="content-wrapper">
-  
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/127513/pexels-photo-127513.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing First Title</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio, pariatur&hellip;</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing Second Title that is Quite Long</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati ex natus nulla rem sequi laborum quod fugit&hellip;</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing Title</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/248486/pexels-photo-248486.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing Forth Title that is Quite Long</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet!</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing Fifth Title</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio&hellip;</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <a href="#" class="news-card__card-link"></a>
-    <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image"/>
-    <div class="news-card__text-wrapper">
-      <h2 class="news-card__title">Amazing 6<sup>th</sup> Title</h2>
-      <div class="news-card__post-date">Jan 29, 2018</div>
-      <div class="news-card__details-wrapper">
-        <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia.</p>
-        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-</div> */}
-  {/* <div className="services" id="services">
-
-  <div className="awesome">
-
-    <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
-    <span>Projects</span>
-    <span>
-      Here are links to my few React JS website projects
-      <br />
-      <p className="mx-5">
-        Click these <i className="fa-sharp fa-solid fa-3"></i> Boxes
-        <i className="fa-sharp fa-solid fa-right-long ma"></i>
-      </p>
-    </span>
-    <a href="https://wa.me/+923189391781">
-      <button className="button s-button">Whatsapp</button>
-    </a>
-    <div
-      className="blur s-blur1"
-      style={{ background: "#ABF1FF94" }}
-    ></div>
-  </div>
-
-  <div className="cards">
-
-    <motion.div
-      initial={{ left: "25rem" }}
-      whileInView={{ left: "14rem" }}
-      transition={transition}
-    >
-      <a
-        className="nav-link text-light"
-        href="https://saloonshop.vercel.app/"
+  return (
+    <section className="services-section" id="services">
+      {/* Header */}
+      <motion.div
+        className="services-header"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        <Card
-          emoji={HeartEmoji}
-          heading={"Design"}
-          detail={"Web design, HTML CSS design, Bootstrap 5, JavaScript"}
-        />
-      </a>
-    </motion.div>
-    <motion.div
-      initial={{ left: "35rem" }}
-      whileInView={{ left: "30rem" }}
-      transition={transition}
-    >
-      <a
-        className="nav-link text-light"
-        href="http://welcome.devforhealth.com/MainScreen"
-      >
-        <Card
-          emoji={HeartEmoji}
-          heading={"Professional work"}
-          detail={"Mega level projects"}
-        />
-      </a>
-    </motion.div>
+        <span className="services-label">What I Offer</span>
+        <h2 className="services-title" style={{ color: darkMode ? "white" : "" }}>
+          My <span className="services-highlight">Services</span>
+        </h2>
+        <p className="services-sub" style={{ color: darkMode ? "#aaa" : "" }}>
+          From React frontends to Python backends, AI-powered pipelines, and
+          cloud infrastructure — I deliver complete, production-ready solutions.
+        </p>
+      </motion.div>
 
-    <motion.div
-      initial={{ left: "-11rem", top: "12rem" }}
-      whileInView={{ left: "-4rem" }}
-      transition={transition}
-    >
-      <a
-        className="nav-link text-light"
-        href="https://car-sandy.vercel.app/"
+      {/* Cards grid */}
+      <motion.div
+        className="services-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
       >
-        <Card
-          emoji={Glasses}
-          heading={"Developer"}
-          detail={"HTML, CSS, JavaScript, React, Nodejs, Express"}
-        />
-      </a>
-    </motion.div>
+        {services.map((svc) => (
+          <motion.div
+            key={svc.title}
+            className="service-card"
+            variants={cardVariants}
+            whileHover={{ y: -8, boxShadow: "0 28px 56px rgba(0,0,0,0.18)" }}
+            style={{
+              background: darkMode ? "rgba(255,255,255,0.05)" : svc.bg,
+              borderColor: darkMode ? "rgba(255,255,255,0.1)" : svc.border,
+            }}
+          >
+            <div
+              className="service-icon-wrap"
+              style={{ background: svc.color + "22" }}
+            >
+              <span className="service-icon">{svc.icon}</span>
+            </div>
 
-    <motion.div
-      initial={{ top: "19rem", left: "25rem" }}
-      whileInView={{ left: "12rem" }}
-      transition={transition}
-    >
-      <a
-        className="nav-link text-light"
-        href="https://mern-418ex8thb-ehteshambutt.vercel.app/"
-      >
-        <Card
-          emoji={Humble}
-          heading={"Figma to"}
-          detail={"I can make your Figma design into a React JS website"}
-          color="rgba(252, 166, 31, 0.45)"
-        />
-      </a>
-    </motion.div>
-    <div
-      className="blur s-blur2 mt-5"
-      style={{ background: "var(--purple)" }}
-    ></div>
-  </div>
-</div> */}
-</>
+            <h3
+              className="service-card-title"
+              style={{ color: svc.color }}
+            >
+              {svc.title}
+            </h3>
 
+            <p
+              className="service-card-desc"
+              style={{ color: darkMode ? "#cbd5e0" : "#4a5568" }}
+            >
+              {svc.desc}
+            </p>
+
+            <div className="service-tags">
+              {svc.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="service-tag"
+                  style={{
+                    borderColor: svc.color + "55",
+                    color: darkMode ? "#e2e8f0" : "#374151",
+                    background: darkMode ? "rgba(255,255,255,0.07)" : "white",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Decorative blurs */}
+      <div className="srv-blur srv-blur--tl" />
+      <div className="srv-blur srv-blur--br" />
+    </section>
   );
 };
 

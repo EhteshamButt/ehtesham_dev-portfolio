@@ -107,9 +107,13 @@ const Works = () => {
           >
             <img src={'https://camo.githubusercontent.com/54d64f1260052c96ce70c540bd64ee83edbe865aa765941bbc012821744fe265/68747470733a2f2f6173736574732e7a6569742e636f2f696d6167652f75706c6f61642f76313533383336313039312f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6a732e706e67'} alt="" />
           </motion.div>
-          <div className="">
-            <img alt="" />
-          </div>{" "}
+          <motion.div 
+            className="w-secCircle"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img src={"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"} alt="Python" />
+          </motion.div>{" "}
           <motion.div 
             className="w-secCircle"
             whileHover={{ scale: 1.2, rotate: 360 }}
