@@ -223,6 +223,12 @@
   --color-3: black;
 }
 
+.title-word-5 {
+  --color-1: #B794F4;
+  --color-2: #68D391;
+  --color-3: #FCA61F;
+}
+
 @keyframes color-animation {
   0%    {color: var(--color-1)}
   32%   {color: var(--color-1)}

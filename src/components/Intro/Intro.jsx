@@ -52,7 +52,8 @@ const Intro = () => {
      <span class="title-word title-word-1">Senior Full Stack & AI Engineer</span>
     <span class="title-word title-word-2"> with</span>
     <span class="title-word title-word-3"> 10+ years experience</span>
-    <span class="title-word title-word-4"> RAG · LangGraph · Agentic AI · LLMs · Chatbots · FastAPI</span>
+    <span class="title-word title-word-4"> Next.js · React · Node.js · Python · FastAPI · NestJS</span>
+    <span class="title-word title-word-5"> RAG · LangGraph · Agentic AI · LLMs · Chatbots</span>
   
 
           </span>
