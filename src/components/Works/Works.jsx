@@ -42,21 +42,20 @@ const Works = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4, type: "spring" }}
           >Brands & Clients</motion.span>
-          <motion.spane 
-            style={{background:"cyan"}}
+          <motion.span
+            style={{ color: "var(--gray)", fontSize: "14px", marginTop: "1rem", lineHeight: "1.7" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-I am senior React js/Next.js and Node js nest and express developer with 8 + years experience              <br />
-           I works as Senior MERN Stack developer at SolutionWIngs.io LTD,Islamabad 
-             
+            Senior Full Stack Developer with 10+ years of experience building
+            scalable web apps, REST APIs, and AI-powered solutions.
             <br />
-            {/* Also works as node js developer as Freelancer */}
-            <br />
-           <span className="ml-8 text-muted">Full Stack Developer</span> 
-          </motion.spane>
+            Currently at <strong>FiveLoop Technology</strong>, Lahore — delivering
+            production-ready systems with React, Next.js, Node.js, NestJS, Python,
+            FastAPI, and modern AI/LLM stacks.
+          </motion.span>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

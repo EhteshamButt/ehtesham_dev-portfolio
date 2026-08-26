@@ -41,9 +41,10 @@ const Navbar = () => {
           <ul style={{ listStyleType: "none" }}>
             {[
               { to: "Navbar", text: "Home" },
-              { to: "services", text: "Serivces" },
+              { to: "services", text: "Services" },
+              { to: "skills", text: "Skills" },
               { to: "works", text: "Experience" },
-              { to: "portfolio", text: "Protfolio" },
+              { to: "portfolio", text: "Portfolio" },
               { to: "testimonial", text: "Testimonial" }
             ].map((item, index) => (
               <motion.li

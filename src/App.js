@@ -3,6 +3,7 @@ import Intro from "./components/Intro/Intro";
 import Services from "./components/Services/Services";
 import "./App.css";
 import Experience from "./components/Experience/Experience";
+import Skills from "./components/Skills/Skills";
 import Works from "./components/Works/Works";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonial from "./components/Testimonials/Testimonial";
@@ -25,6 +26,7 @@ function App() {
       <Intro />
       <Services />
       <Experience />
+      <Skills />
       <Works />
       <Portfolio />
       <Testimonial />
