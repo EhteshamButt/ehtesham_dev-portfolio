@@ -51,8 +51,8 @@ const Intro = () => {
 
      <span class="title-word title-word-1">Senior Full Stack Developer</span>
     <span class="title-word title-word-2"> with</span>
-    <span class="title-word title-word-3"> 8 + years experience</span>
-    <span class="title-word title-word-4"> Next.js React js Node Nest js and Express js</span>
+    <span class="title-word title-word-3"> 10+ years experience</span>
+    <span class="title-word title-word-4"> Next.js · React · Node.js · NestJS · AI/LLM</span>
   
 
           </span>
@@ -78,14 +78,14 @@ const Intro = () => {
         >
           <motion.a
             className="nav-link text-light"
-            href="https://github.com/Ehteshambutt"
+            href="https://github.com/EhteshamButt"
             whileHover={{ scale: 1.2, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300 }}
           ><img src={Github} alt="" /></motion.a>
           <motion.a
             className="nav-link text-light"
-            href="https://www.linkedin.com/in/ehtesham-butt-837200162/"
+            href="https://www.linkedin.com/in/ehtesham-ali-587979402/"
             whileHover={{ scale: 1.2, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300 }}

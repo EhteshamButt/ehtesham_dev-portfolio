@@ -60,8 +60,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Senior React.js/Next.js and Node.js Developer with 8+ years of experience. Currently working as Senior
-                MERN Stack Developer at SolutionWIngs.io LTD, Islamabad.
+                Senior Full Stack Developer with 10+ years of experience building scalable web apps, REST APIs, and AI-powered solutions. Currently at FiveLoop Technology, Lahore.
               </motion.p>
               <div className="d-flex align-items-center mb-3 text-light">
                 <UilMapMarker size="20" className="text-primary me-2" />
@@ -227,16 +226,16 @@ const Footer = () => {
               {/* Company Info */}
               <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                 <p className="text-light mb-1 small">
-                  Currently at <span className="text-primary fw-semibold">SolutionWIngs.io LTD</span>
+                  Currently at <span className="text-primary fw-semibold">FiveLoop Technology</span>
                 </p>
-                <p className="text-muted small mb-0">Senior MERN Stack Developer • Islamabad</p>
+                <p className="text-muted small mb-0">Senior Full Stack Developer • Lahore, Pakistan</p>
               </div>
 
               {/* Social Media Links */}
               <div className="col-md-6 text-center text-md-end">
                 <div className="d-flex justify-content-center justify-content-md-end gap-3">
                   <motion.a
-                    href="https://github.com/Ehteshambutt"
+                    href="https://github.com/EhteshamButt"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-light btn-sm rounded-circle p-2"
@@ -255,7 +254,7 @@ const Footer = () => {
                     <UilGithub size="20" />
                   </motion.a>
                   <motion.a
-                    href="https://www.linkedin.com/in/ehteshamali-https://linkedin.com/in/ehteshamali-"
+                    href="https://www.linkedin.com/in/ehtesham-ali-587979402/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-light btn-sm rounded-circle p-2"
