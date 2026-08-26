@@ -1,13 +1,16 @@
 .t-wrapper {
-  padding: 0 3rem 0 3rem;
+  padding: 5rem 3rem 5rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 4rem;
   flex-direction: column;
   gap: 3rem;
   position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  border-radius: 32px;
+  overflow: hidden;
 }
 
 .t-heading {
@@ -21,6 +24,7 @@
   font-weight: bold;
   display: inline-block;
   margin-right: 0.5rem;
+  color: white;
 }
 
 .t-heading .highlight-text {
@@ -93,11 +97,11 @@
   width: 100%;
   max-width: 700px;
   min-height: 400px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2),
-              0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35),
+              0 0 0 1px rgba(255, 255, 255, 0.06) inset;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -289,14 +293,15 @@
 /* Responsive Design */
 @media screen and (max-width: 1100px) {
   .t-wrapper {
-    margin-top: 12rem;
+    margin-top: 3rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .t-wrapper {
-    padding: 0 2rem;
-    margin-top: 25rem;
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+    border-radius: 24px;
   }
 
   .t-heading > * {
@@ -336,8 +341,8 @@
 
 @media screen and (min-width: 500px) and (max-width: 600px) {
   .t-wrapper {
-    margin-top: 46rem;
-    padding: 0 1.5rem;
+    margin-top: 3rem;
+    padding: 3rem 1.5rem;
   }
 
   .testimonial-card {
@@ -348,18 +353,14 @@
 
 @media screen and (min-width: 440px) and (max-width: 588px) {
   .Testo {
-    margin-top: 88rem;
+    margin-top: 2rem;
   }
 }
 
 @media screen and (min-width: 370px) and (max-width: 450px) {
-  .experience {
-    margin-top: 50rem;
-  }
-
   .t-wrapper {
-    margin-top: 49rem;
-    padding: 0 1rem;
+    margin-top: 2rem;
+    padding: 3rem 1rem;
   }
 
   .t-heading > * {
@@ -399,11 +400,11 @@
 
 @media screen and (min-width: 200px) and (max-width: 440px) {
   .Testo {
-    margin-top: 95rem;
+    margin-top: 2rem;
   }
 
   .t-wrapper {
-    padding: 0 0.5rem;
+    padding: 3rem 0.8rem;
   }
 
   .t-heading > * {
@@ -422,9 +423,10 @@
 
 @media screen and (max-width: 480px) {
   .t-wrapper {
-    margin-top: 49rem;
-    padding: 0 1rem;
+    margin-top: 2rem;
+    padding: 3rem 1rem;
     gap: 2rem;
+    border-radius: 20px;
   }
 
   .t-heading {
