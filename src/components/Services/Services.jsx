@@ -24,12 +24,12 @@ const services = [
   },
   {
     icon: "🤖",
-    title: "AI & LLM Integration",
+    title: "AI Engineering & LLMs",
     color: "#B794F4",
     bg: "rgba(183,148,244,0.1)",
     border: "rgba(183,148,244,0.3)",
-    desc: "Production AI features using OpenAI, Claude, and Qwen — RAG pipelines, LangChain workflows, OCR, document intelligence, and conversational AI.",
-    tags: ["OpenAI", "RAG", "LangChain", "OCR", "AWS Bedrock"],
+    desc: "Production AI systems — RAG pipelines, LangGraph agentic workflows, LLM-powered chatbots, OCR, document intelligence, and conversational AI using OpenAI, Claude, Qwen, and AWS Bedrock.",
+    tags: ["RAG", "LangGraph", "Agentic AI", "LLMs", "Chatbots", "LangChain"],
   },
   {
     icon: "☁️",

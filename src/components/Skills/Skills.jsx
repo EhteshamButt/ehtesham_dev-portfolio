@@ -37,9 +37,10 @@ const skillCategories = [
     border: "rgba(183, 148, 244, 0.35)",
     skills: [
       "OpenAI", "ChatGPT", "Claude", "Qwen",
-      "RAG", "LangChain", "OCR", "AI Automation",
+      "RAG", "LangChain", "LangGraph", "OCR",
+      "Agentic AI", "AI Automation", "Chatbot Development",
       "Conversational AI", "Document Intelligence",
-      "Embeddings", "Vector Search",
+      "LLM Integration", "Embeddings", "Vector Search",
       "AWS Bedrock", "OpenSearch"
     ],
   },
