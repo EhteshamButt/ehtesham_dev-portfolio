@@ -5,23 +5,26 @@
   padding: 4rem 3rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: center;
+  gap: 6rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------- Left side ---------- */
 .w-left {
   flex: 1;
   min-width: 0;
+  max-width: 480px;
 }
 
 .awesome {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 480px;
 }
 
 .awesome > :nth-child(1) {
@@ -51,17 +54,18 @@
 .w-right {
   flex-shrink: 0;
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
 }
 
+/* Main white circle — centered in w-right */
 .w-mainCircle {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 17rem;
-  height: 17rem;
+  width: 230px;
+  height: 230px;
   border-radius: 100%;
   box-shadow: var(--smboxShadow);
   background: white;
@@ -74,14 +78,15 @@
 
 /* Top center */
 .w-mainCircle > :nth-child(1) {
-  top: -3rem;
+  top: -44px;
   left: 50%;
   transform: translateX(-50%);
 }
 /* Left */
 .w-mainCircle > :nth-child(2) {
-  left: -3rem;
-  top: 5rem;
+  left: -44px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 /* Center */
 .w-mainCircle > :nth-child(3) {
@@ -91,19 +96,20 @@
 }
 /* Right */
 .w-mainCircle > :nth-child(4) {
-  right: -3rem;
-  top: 5rem;
+  right: -44px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 /* Bottom center */
 .w-mainCircle > :nth-child(5) {
-  bottom: -3rem;
+  bottom: -44px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .w-secCircle {
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
   border: 4px solid #ebebeb;
   display: flex;
@@ -114,31 +120,31 @@
 }
 
 .w-secCircle > img {
-  transform: scale(0.6);
-  width: 100%;
-  height: 100%;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
 /* ---------- Background decorative circles ---------- */
 .w-backCircle {
   position: absolute;
-  height: 11rem;
-  width: 11rem;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   z-index: 1;
 }
 
+/* Positioned inside w-right, behind mainCircle */
 .blueCircle {
   background: #1949b8;
-  right: -3rem;
-  top: -2rem;
+  right: 0;
+  top: 0;
 }
 
 .yellowCircle {
   background: #f5c32c;
-  right: -3rem;
-  bottom: -2rem;
+  right: 0;
+  bottom: 0;
 }
 
 /* ---------- Blur ---------- */
@@ -161,28 +167,39 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem 2rem;
-    gap: 5rem;
+    gap: 4rem;
     margin-top: 2rem;
+    max-width: 100%;
   }
 
   .w-left {
-    width: 100%;
-  }
-
-  .awesome {
     max-width: 100%;
-    align-items: center;
     text-align: center;
   }
 
   .w-right {
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
   }
 
   .w-mainCircle {
-    width: 14rem;
-    height: 14rem;
+    width: 190px;
+    height: 190px;
+  }
+
+  .w-secCircle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .w-secCircle > img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .w-backCircle {
+    height: 120px;
+    width: 120px;
   }
 }
 
@@ -190,7 +207,7 @@
 @media screen and (max-width: 480px) {
   .works {
     padding: 2.5rem 1rem;
-    gap: 4rem;
+    gap: 3.5rem;
     margin-top: 1.5rem;
   }
 
@@ -200,22 +217,32 @@
   }
 
   .w-right {
-    width: 240px;
-    height: 240px;
+    width: 270px;
+    height: 270px;
   }
 
   .w-mainCircle {
-    width: 13rem;
-    height: 13rem;
+    width: 160px;
+    height: 160px;
   }
 
   .w-secCircle {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 58px;
+    height: 58px;
+  }
+
+  .w-secCircle > img {
+    width: 36px;
+    height: 36px;
   }
 
   .w-backCircle {
-    height: 9rem;
-    width: 9rem;
+    height: 100px;
+    width: 100px;
   }
+
+  .w-mainCircle > :nth-child(1) { top: -36px; }
+  .w-mainCircle > :nth-child(2) { left: -36px; }
+  .w-mainCircle > :nth-child(4) { right: -36px; }
+  .w-mainCircle > :nth-child(5) { bottom: -36px; }
 }
